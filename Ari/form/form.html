@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+	<script>
+		/*$(document).ready(function (){
+			var currentDate= new Date();
+			$('.validate').datepicker({
+			format: 'dd/mm/yyyy',
+			autoclose:true,
+			endDate: 'currentDate',
+			maxDate: currentdate
+			}).on('changeDate', function(ev){
+			$(this).datepicker('hide');});
+			$('.disableDuturedate').keyup(function(){
+				if (this.value.match([^0-9]/g)){
+				this.value = this.value.replace(/[^0-9^-]/g,'');
+				}
+			});
+		});
+		$(function() {
+				var date = new Date();
+				var currentMonth = date.getMonth();
+				var currentDate = date.getDate();
+				var currentYear = date.getFullYear();
+				$('#validate').datepicker({
+				maxDate: new Date(currentYear, currentMonth, currentDate)
+				});
+				});*/
+		
+		$(function() {
+			  var currentYear = (new Date).getFullYear();
+			  var currentMonth = (new Date).getMonth();
+			  var currentDay = (new Date).getDate();
+
+			  $("#validate").datepicker({
+			    minDate: new Date((currentYear - 1), 12, 1),
+			    dateFormat: 'dd/mm/yy',
+			    maxDate: new Date(currentYear, currentMonth, currentDay)
+			  });
+			  /*$("#todate").datepicker({
+			    minDate: new Date((currentYear - 1), 12, 1),
+			    dateFormat: 'dd/mm/yy',
+			    maxDate: new Date(currentYear, currentMonth, currentDay)
+			  });*/
+			});
+
+	</script>
+
+
+	<style>
+		div{
+		margin-left: auto;
+		margin-right: auto;
+		border: solid 1px;
+		border-radius: 20px;
+		padding: 10px;
+		display: inline-block;
+		text-align: center;
+		/*position: absolute;
+		top: 50%;
+		bottom: 50%;
+		left: 300px;
+		right: 40px;*/
+		}
+		label{
+		display: flex;
+		justify-content: space-evenly;
+		}
+	</style>
+
+
+	<title>
+		Activity log 
+	</title>
+	
+	
+	<body>
+		<div> 
+			<p> Activity Log </p>
+			<form id="activity_frm" action="activity.php">
+				<label for="fdate" id="date">Date: </label><br>
+				<input type="date" ID="validate"  name="date" placeholder="dd/mm/yyyy" required><br><br>
+				<label for="hour" name="hour" required>Hour: </label><br>
+				<input type="number" min="0" max="16"><br><br>
+				<label for="activity" name="activity" required>Activity: </label><br>
+				<textarea maxlength="250" spellcheck="true" placeholder="Activity..." name="activity form="activity_frm"> </textarea><br>
+				<input type="submit" value="Submit">
+			</form>
+			
+		</div> 
+		
+	</body>
+</html>
+
+
+

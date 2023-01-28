@@ -1,0 +1,89 @@
+<html>
+
+
+(linkn: https://stackoverflow.com/questions/40538289/how-to-make-element-appear-at-the-spot-where-mouse-clicks-in-javascript)
+
+<script>
+var about = document.getElementById("about")
+addEventListener('click',function(event){box.style.visibility="visible";
+     box.left = event.pageX;
+     box.top = event.pageY;
+   })
+
+
+</script>
+
+<style>
+td {
+border: 1px solid black;
+ border-radius: 10px;
+}
+
+ul{
+list-style-type: none; 
+display: inline-block;
+}
+
+div{
+border: none;
+}
+
+</style>
+
+<head>
+<title>MY CV</title>
+</head>
+
+<body>
+
+<p> <h2>Arindam Garain</h2> </p>
+
+<div id="about"><h4>About me:</h4><br>Sairam, I am Arindam Garain. I hail from West Bengal, India. Currently I am a final year studen undergraduate student at Sri Sathya Sai Istitute of Higher Learning. I love playing football and maintain a good physique. Maths and computer science occupy a special corner in my heart.</div> 
+
+<div id="personal">
+<h4>Presonal Deltails: </h4>
+<table>
+<tr>
+<td> Address </td>
+<td> Sathya Sai Boys Hostel, Whitefield, Kadugodi, Bangalore, Karnataka, India</td>
+</tr>
+<tr>
+<td> Contact Info </td>
+<td> Phone number: 0123456789<br>Email: abc@gmail.com</td>
+</tr>
+</table>
+</div>
+
+<div id="education">
+<h4> Education: </h4>
+<table>
+<tr>
+<td>Schooling</td>
+<td>Matricultaion- Kendriya Vidyalaya Birbhum <br> Higher Secondary- Sri Sathya Sai Higher Secondary School</td>
+</tr>
+<tr>
+<td> College </td>
+<td> Sri Sathya Sai Institute of Higher Learning </td>
+</tr>
+<tr>
+<td> Couses taken </td>
+<td>
+<ul >
+<li> Maths <li>Linear Algebra</li> <li>Real Analysis</li> <li>Complex Analysis</li>
+</ul>
+<ul > 
+<li>Computer Science </li> <li>Problem Solving with Python</li> <li>Visualization with R</li> <li>C programming</li> 
+</ul>
+</td>
+</tr> 
+</table>
+</div>
+
+<div id="activities">
+<h4> Activities </h4>
+<p>I have perticipated in cluster level drama compition and my team secured second place. I was also part of school kho-kho team and have palyed regional level. I enjoy playing tabla. I was part of the winning football team for the house match.  </p>
+</div>
+
+<button id="next_info">Next</button>
+</body>
+</html>
